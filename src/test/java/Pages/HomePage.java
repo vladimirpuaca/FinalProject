@@ -10,7 +10,10 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class HomePage extends BaseFile {
+
+    public String homepageURL;
 
     public HomePage() {
         PageFactory.initElements(driver, this);
@@ -19,7 +22,7 @@ public class HomePage extends BaseFile {
     @FindBy(xpath = "/html/body/div[2]/div/div/div[2]/div/div[1]")
     public WebElement elementscard;
 
-    @FindBy()
+//    @FindBy(xpath = )
 
 
 
