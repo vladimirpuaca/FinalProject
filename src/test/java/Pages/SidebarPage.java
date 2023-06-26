@@ -13,7 +13,7 @@ public class SidebarPage extends BaseFile {
         PageFactory.initElements(driver,this);
     }
 
-    @FindBy(xpath = "/html/body/div[2]/div/div/div[2]/div[1]/div/div/div[1]/span")
+    @FindBy(xpath = "/html/body/div[2]/div/div/div[2]/div[1]/div/div/div[1]/span/div")
     public WebElement elementsButton;
 
     @FindBy(xpath = "/html/body/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/ul/li[1]")
