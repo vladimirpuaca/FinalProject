@@ -1,10 +1,10 @@
 package Tests;
 
 import Base.BaseFile;
+import Pages.ElementsCard.RadioButtonPage;
 import Pages.HomePage;
 import Pages.SidebarPage;
-import Pages.TextBoxPage;
-import org.openqa.selenium.chrome.ChromeOptions;
+import Pages.ElementsCard.TextBoxPage;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -16,11 +16,11 @@ public class Testing extends BaseFile {
     public SidebarPage sidebarPage;
     public TextBoxPage textBoxPage;
     public String homepageURL = "https://demoqa.com/";
-    public static ChromeOptions options;
     public String fullName;
     public String userEmail;
     public String currentAddress;
     public String permanentAddress;
+    public RadioButtonPage radioButtonPage;
 
 
     @BeforeClass
@@ -33,6 +33,8 @@ public class Testing extends BaseFile {
         userEmail = excelReader.getStringData("TextBoxPage", 1, 1);
         currentAddress = excelReader.getStringData("TextBoxPage", 2, 1);
         permanentAddress = excelReader.getStringData("TextBoxPage", 3, 1);
+        radioButtonPage = new RadioButtonPage();
+
     }
 
     @Test(priority = 10)
@@ -74,12 +76,24 @@ public class Testing extends BaseFile {
         waiter.until(ExpectedConditions.urlToBe(homepageURL));
         Assert.assertEquals(driver.getCurrentUrl(), homepageURL);
         waiter.until(ExpectedConditions.elementToBeClickable(homePage.elementscard));
-        //driver.findElement(By.cssSelector("#app > div > div > div.home-body > div > div:nth-child(1)")).click();
         homePage.elementscard.click();
         sidebarPage.smallCardsSelector("Radio Button").click();
 
 
+        Assert.assertFalse(radioButtonPage.yesRadioButton.isSelected());
+        Assert.assertEquals(radioButtonPage.numberOfOutputMessages(), 0);
+        radioButtonPage.clickOnRadioButton("Yes");
+        Assert.assertTrue(radioButtonPage.yesRadioButton.isSelected());
+        Assert.assertEquals(radioButtonPage.outputMessage.getText(), "Yes");
 
+        Assert.assertFalse(radioButtonPage.impressiveRadioButton.isSelected());
+        Assert.assertNotEquals(radioButtonPage.outputMessage.getText(), "Impressive");
+        radioButtonPage.javaSriptClick(radioButtonPage.impressiveRadioButton);
+        Assert.assertTrue(radioButtonPage.impressiveRadioButton.isSelected());
+        Assert.assertEquals(radioButtonPage.outputMessage.getText(), "Impressive");
+    }
+    @Test(priority = 30)
+    public void elements3_links () {
 
     }
 }
