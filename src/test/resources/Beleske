@@ -1,0 +1,65 @@
+Sajt gde mogu da proverim za Fluent Wait i gresku koju prijavljuje:
+https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/support/ui/FluentWait.html
+
+Dobar fazon je za ovo kupljenje gomile dugmica sa nekom opstom klasom i onda izvlacenje dugmica po
+tome koji je tekst u/na njemu.
+
+O radio button-ima: https://www.toolsqa.com/selenium-webdriver/selenium-radio-buttons/
+
+Dobio sam gresku na radioButtonima kada sam pokusao da kliknem na njega preko id-a. Medjutim
+to nije radilo pa smo uveli klik preko JavaScriptExecutora.
+Druga varijanta jeste da se pokupe svi RadioButtoni u listu i da se onda klikce na njih.
+
+Dobar izvor o pop-up message-ima:
+https://www.toolsqa.com/selenium-webdriver/alerts-in-selenium/
+
+A evo linka za celokupan Webdriver
+https://www.toolsqa.com/selenium-webdriver/selenium-tutorial/
+
+
+Nikoline metode:
+
+    public void waitForInvisibility(WebElement element) {
+        wait.until(ExpectedConditions.invisibilityOf(element));
+    }
+
+    public void waitForClickability(WebElement element) {
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    public boolean elementIsPresent(WebElement element) {
+        boolean nonexistingElement = false;
+        try {
+            nonexistingElement = element.isDisplayed();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return nonexistingElement;
+    }
+
+https://toolsqa.com/selenium-webdriver/actions-class-in-selenium/
+
+Kako pronalaziti elemente u Seleniumu:
+https://www.selenium.dev/documentation/webdriver/elements/finders/
+
+O tome kako da koristimo css selektore u Seleniumu (preporuka MM)
+https://www.qafox.com/selenium-locators-using-starts-with-ends-with-and-contains-in-css-selectors/
+
+Malo sam ispao glup za ovaj slider. Nisam skontao da je njemu offsetBy pocinje uvek od value 50.
+I pokusavao sam da napravim neku funkciju, ali zapravo ta funkcija nije bila dobra.
+U sustini kad se koritsti
+
+Draganov kod za gasenje banera:
+    public void ifBottomBannerDisplayedShutIt() {
+        try {
+            ((JavascriptExecutor) driver).executeScript("arguments[0].parentNode.removeChild(arguments[0])", driver.findElement(By.id("fixedban")));
+        } catch (Exception ignored) {
+        }
+    }
+
+Sacekati da element sa strane nestane:
+https://www.tutorialspoint.com/how-to-wait-until-an-element-no-longer-exists-in-selenium
+
+O lokatorima:
+https://www.browserstack.com/guide/locators-in-selenium
