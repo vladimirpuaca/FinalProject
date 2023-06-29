@@ -33,6 +33,12 @@ public class TextBoxPage extends BaseFile {
     @FindBy(id="email")
     public WebElement outputUserEmailBox;
 
+    @FindBy(xpath = "/html/body/div[2]/div/div/div[2]/div[2]/div[2]/form/div[6]/div/p[3]")
+    public WebElement outputCurrentAddressBox;
+
+    @FindBy(xpath = "/html/body/div[2]/div/div/div[2]/div[2]/div[2]/form/div[6]/div/p[4]")
+    public WebElement outputPermanentAddressBox;
+
     @FindBy (id="output")
     public WebElement outputfield;
 }

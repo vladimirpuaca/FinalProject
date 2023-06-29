@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d572a601-05f3-49c9-8acd-0c6ffd288887" name="Changes" comment="Second commit">
+    <list default="true" id="d572a601-05f3-49c9-8acd-0c6ffd288887" name="Changes" comment="Third commit - TextBoxPage and test done">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/ElementsTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/TextBoxPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ElementsCard/TextBoxPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/Testing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/Testing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Base/BaseFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Base/BaseFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ElementsCard/TextBoxPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ElementsCard/TextBoxPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/Testing.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,8 +58,8 @@
       <recent name="C:\Users\Pux\IdeaProjects\FinalProject\src\test\java" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.Testing.elementstest2_radio">
-    <configuration name="Testing" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.WidgetsTests.sliderCannotGoMoreExtreme">
+    <configuration name="AlertsTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="FinalProject" />
       <extension name="coverage">
         <pattern>
@@ -65,7 +68,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.Testing" />
+      <option name="MAIN_CLASS_NAME" value="Tests.AlertsTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -73,7 +76,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Testing.elementstest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ElementsTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="FinalProject" />
       <extension name="coverage">
         <pattern>
@@ -82,8 +85,42 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.Testing" />
-      <option name="METHOD_NAME" value="elementstest" />
+      <option name="MAIN_CLASS_NAME" value="Tests.ElementsTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WidgetsTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="FinalProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.WidgetsTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WidgetsTests.sliderCannotGoMoreExtreme" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="FinalProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.WidgetsTests" />
+      <option name="METHOD_NAME" value="sliderCannotGoMoreExtreme" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -91,7 +128,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Testing.elementstest2_radio" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="WidgetsTests.sliderTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="FinalProject" />
       <extension name="coverage">
         <pattern>
@@ -100,8 +137,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.Testing" />
-      <option name="METHOD_NAME" value="elementstest2_radio" />
+      <option name="MAIN_CLASS_NAME" value="Tests.WidgetsTests" />
+      <option name="METHOD_NAME" value="sliderTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -111,9 +148,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.Testing.elementstest2_radio" />
-        <item itemvalue="TestNG.Testing" />
-        <item itemvalue="TestNG.Testing.elementstest" />
+        <item itemvalue="TestNG.WidgetsTests.sliderCannotGoMoreExtreme" />
+        <item itemvalue="TestNG.WidgetsTests" />
+        <item itemvalue="TestNG.WidgetsTests.sliderTest" />
+        <item itemvalue="TestNG.AlertsTests" />
+        <item itemvalue="TestNG.ElementsTests" />
       </list>
     </recent_temporary>
   </component>
@@ -168,12 +207,20 @@
       <option name="project" value="LOCAL" />
       <updated>1687868533106</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Third commit - TextBoxPage and test done">
+      <created>1687879469531</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1687879469531</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
     <MESSAGE value="Second commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Second commit" />
+    <MESSAGE value="Third commit - TextBoxPage and test done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Third commit - TextBoxPage and test done" />
   </component>
 </project>
